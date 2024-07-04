@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Simple Calculator By R.R. Opar</h1>
+    <div id="container">
+
+        <form action="">
+            <div class="result">
+                <input id="result" type="text">
+            </div>
+            <div>
+                <input type="button" value="DE" onclick="Delete(' ')">
+                <input type="button" value="(" onclick="calculation('(')">
+                <input type="button" value=")" onclick="calculation(')')">
+                <input type="button" value="/" onclick="calculation('/')">
+            </div>
+            <div>
+                <input id="MyResult" type="button" value="7" onclick="calculation('7')">
+                <input type="button" value="8" onclick="calculation('8')">
+                <input type="button" value="9" onclick="calculation('9')">
+                <input type="button" value="*" onclick="calculation('*')">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="calculation('4')">
+                <input type="button" value="5" onclick="calculation('5')">
+                <input type="button" value="6" onclick="calculation('6')">
+                <input type="button" value="-" onclick="calculation('-')">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="calculation('1')">
+                <input type="button" value="2" onclick="calculation('2')">
+                <input type="button" value="3" onclick="calculation('3')">
+                <input type="button" value="+" onclick="calculation('+')">
+            </div>
+            <div>
+                <input type="button" value="0" onclick="calculation('0')">
+                <input type="button" value="." onclick="calculation('.')">
+                <input type="button" value="Mod" onclick="calculation('%')">
+                <input type="button" value="=" onclick="answer()">
+            </div>
+        </form>
+    </div>
+
+     <script>
+
+        function calculation(a){
+            document.getElementById('result').value  += a;
+            a = result;
+        }
+        function Delete(){
+            document.getElementById('result').value = " ";
+        }
+        function answer(){
+          let a = document.getElementById("result").value;
+          let b = eval(a);
+           document.getElementById("result").value=b;
+       }
+     </script>
+    
+
+
+</body>
+</html>
